@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react"
 function App() {
 
   const defaultState = {
-    breakLength : 1,
-    sessionLength : 2,
+    breakLength : 5,
+    sessionLength : 25,
   }
 
   const [breakLength, setBreakLength] = useState(defaultState.breakLength);
@@ -125,7 +125,7 @@ function App() {
             return currentTime;
           }
         })
-      }, 100);
+      }, 1000);
     }
     else {
       setPlayBtnClass('play')
