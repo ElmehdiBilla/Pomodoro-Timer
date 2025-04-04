@@ -1,0 +1,151 @@
+:root{
+  --cl-50:#eef5ff;
+  --cl-100:#d8e8ff;
+  --cl-200:#b9d6ff;
+  --cl-300:#89beff;
+  --cl-400:#529bff;
+  --cl-500:#2a73ff;
+  --cl-600:#1b56fd;
+  --cl-700:#0c3ae9;
+  --cl-800:#1130bc;
+  --cl-900:#142e94;
+  --cl-950:#111e5a;
+  --st-cl:#ff3425;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color: var(--cl-800);
+  color: var(--cl-50);
+}
+button {
+  padding: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+label{
+  text-align: center;
+}
+.color-blue{
+  color: var(--cl-950);
+}
+.color-red{
+  color: var(--st-cl);
+}
+.pomodoro-timer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+#timer{
+  position: relative;
+  padding: 4rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  background-color: #ffe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cl-950);
+}
+.progress-circle {
+  position: absolute;
+  width: 350px;
+  height: 330px;
+  border-radius: 100%;
+  z-index: -1;
+}
+#timer-label{
+  color: var(--cl-900);
+}
+#time-left{
+  font-size: 5rem;
+}
+#timer button{
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-inline: 5px;
+}
+.play{
+  background-color: var(--cl-500);
+  color: var(--cl-100);
+}
+.stop{
+  background-color: var(--st-cl);
+  color: var(--cl-100);
+}
+#controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: 0.7s;
+}
+.length-controls{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.length-controls > div{
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.length-controls button{
+  background-color: var(--cl-950);
+  color: var(--cl-50);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#session-label,#break-label{
+  padding: 5px;
+  display: block;
+  color: var(--cl-100);
+}
+.hidden{
+  display: none !important ;
+}
+.show{
+  display: flex;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, var(--cl-950) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--cl-950) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 30%;
+}
+#github{
+  position: absolute;
+  color: var(--cl-100);
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: center;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,0);
+  margin-bottom: 20px;
+}
+
